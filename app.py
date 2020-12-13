@@ -8,8 +8,10 @@ import patient_demographics
 import patient_medical_reason
 import resources
 
-app = dash.Dash(__name__, external_stylesheets=resources.external_stylesheets)
-server = app.server
+#server = app.server
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=resources.external_stylesheets, server=server)
+
 app.config['suppress_callback_exceptions'] = True
 
 
