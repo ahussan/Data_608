@@ -7,7 +7,11 @@ from dash.dependencies import Input, Output
 import patient_demographics
 import patient_medical_reason
 import resources
-from app import app
+
+app = dash.Dash(__name__, external_stylesheets=resources.external_stylesheets)
+server = app.server
+app.config['suppress_callback_exceptions'] = True
+
 
 patient_data_df = pd.read_csv(resources.data_url)
 
