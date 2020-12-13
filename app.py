@@ -7,6 +7,7 @@ from dash.dependencies import Input, Output
 import patient_demographics
 import patient_medical_reason
 import resources
+import flask
 
 #server = app.server
 server = flask.Flask(__name__)
