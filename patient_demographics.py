@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.graph_objs as go
 import resources
 
+
 patient_data_df = pd.read_csv(resources.data_url)
 
 # gender count
