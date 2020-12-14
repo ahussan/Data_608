@@ -14,8 +14,6 @@ server = flask.Flask(__name__)
 app = dash.Dash(__name__, external_stylesheets=resources.external_stylesheets, server=server)
 
 app.config['suppress_callback_exceptions'] = True
-
-
 patient_data_df = pd.read_csv(resources.data_url)
 
 patient_data_df['admit_type'] = patient_data_df['admission_type_id'].map(resources.event_dictionary)
@@ -127,3 +125,4 @@ def page_2_dropdown(val):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+    
